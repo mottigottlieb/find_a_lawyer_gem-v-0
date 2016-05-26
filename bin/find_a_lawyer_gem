@@ -1,8 +1,11 @@
 #!/usr/bin/env ruby 
- 
-require "find_a_lawyer_gem"
+ require "bundler/setup" 
+require 'find_a_lawyer_gem'
+require 'open-uri'
+require 'nokogiri'
 
 start = FindALawyerGem::Scrape.greet
 
-binding.pry
+
 start
+
