@@ -1,8 +1,8 @@
 require "find_a_lawyer_gem/version"
-# require "nokogiri"
- require "open-uri"
+
+require 'nokogiri'
 module FindALawyerGem
-       class Scrape
+      class Scrape
     
     @@track=Hash.new
     @@id=1
@@ -113,7 +113,6 @@ eos
       
   end
   
-    # binding.pry
-   
-end 
+      
+end
 end
