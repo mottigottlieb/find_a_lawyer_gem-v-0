@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby 
+ 
+require "find_a_lawyer_gem"
+
+start = FindALawyerGem::Scrape.greet
+
+binding.pry
+start

@@ -1,7 +1,8 @@
 require "find_a_lawyer_gem/version"
-
+require "nokogiri"
+require "open-uri"
 module FindALawyerGem
-     class Scrape
+       class Scrape
     
     @@track=Hash.new
     @@id=1
