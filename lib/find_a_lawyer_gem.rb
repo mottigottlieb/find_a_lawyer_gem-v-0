@@ -23,7 +23,7 @@ module FindALawyerGem
                         :practice => l_practice,    
                         :rating => l_rating,
                         :years => time.year-l_years,
-                        :number => l_number
+                        :onumber => l_number
                         } 
                       @@id += 1
              end  
@@ -34,6 +34,10 @@ module FindALawyerGem
     def self.track
         @@track
     end
+     
+     def self.pause(length)
+        sleep length
+     end
      
      def self.clear_and_greet
          @@id = 1
@@ -76,8 +80,7 @@ eos
                 
                 answer = gets.strip
                 
-                self.greet if answer == "y"
-                
+                self.greet if answer == "y" 
                 puts "Thank you for Visiting"
                 exit
             else
