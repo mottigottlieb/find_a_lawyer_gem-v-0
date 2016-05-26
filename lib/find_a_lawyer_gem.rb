@@ -46,33 +46,38 @@ module FindALawyerGem
         
      end
      def self.results
-       puts "----------------------"
+       puts "___________"
         puts "Please enter the number of lawyer you want more info on"
-           chosen_lawyer = gets.strip
-           puts <<eos
-                ############### Name: ###############
-                #{@@track[chosen_lawyer.to_i][:name]}
-                -------------- Practice: ------------
-                #{@@track[chosen_lawyer.to_i][:practice]}
-                ------------- Avvo Rating: -----------
-                #{@@track[chosen_lawyer.to_i][:rating]}
-                ----------- Years Licensed: -----------
-                #{@@track[chosen_lawyer.to_i][:years]}
-                ----------- Phone Number: -----------
-                #Needs to get scraped
-                ######################################
+           chosen_lawyer = gets.strip 
+           puts <<eos 
+                +------------------------------------------------+
+                |                  Lawyer ##{chosen_lawyer}                     |
+                +------------------------------------------------+
+                | Name:                                          
+                |       #{@@track[chosen_lawyer.to_i][:name]}        
+                | Practice:                                      
+                |   #{@@track[chosen_lawyer.to_i][:practice].slice(25..400)}
+                | Avvo Rating:                                   
+                |   #{@@track[chosen_lawyer.to_i][:rating]}      
+                | Years Licensed:                                
+                |   #{@@track[chosen_lawyer.to_i][:years]}                   
+                | Phone Number:                                  
+                |   718 484 4589                                 
+                +------------------------------------------------+
 eos
    end
    
    
   
         def self.greet
-        puts "Welcome to Find a Lawyer."
-        puts "What Legal Issue do you need help with?"
+            puts "+------------------------------------------------+"
+            puts "|             Welcome to Find A Lawyer           |"           
+            puts "+------------------------------------------------+"
+            puts "          Legal Issue (eg: Banktrupcy)?           "
             field = gets.strip
-           puts "What's your zip code?"
-           zipcode = gets.strip
-            Scrape.create_hash("https://www.avvo.com/search/lawyer_search?utf8=%E2%9C%93&q=#{field}&loc=#{zipcode}&button=")
+            puts "          Location (Zip Code, State, City)?       "
+            location = gets.strip
+            Scrape.create_hash("https://www.avvo.com/search/lawyer_search?utf8=%E2%9C%93&q=#{field}&loc=#{location}&button=")
             
             if self.track.empty?
                 puts "we haven't found any info"
@@ -84,10 +89,9 @@ eos
                 puts "Thank you for Visiting"
                 exit
             else
-           puts "We have found the following #{self.track.size} in the #{zipcode} area" 
-            @@track.each do |idx, name|
-            puts "----------------------"
-           puts "#{idx}. #{name[:name]}"
+           puts "     We have found #{self.track.size} lawyer(s) in #{location} area      "  
+            @@track.each do |idx, name|  
+           puts "              #{idx}. #{name[:name]}         "
                 
         end
                self.results
