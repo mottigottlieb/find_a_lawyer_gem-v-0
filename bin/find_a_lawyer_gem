@@ -6,4 +6,4 @@ require 'methods'
 require 'open-uri'
  
  
- start = FindALawyerGem::Start.new.call
+FindALawyerGem::Start.new.call
