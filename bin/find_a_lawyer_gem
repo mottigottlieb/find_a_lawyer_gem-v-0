@@ -1,9 +1,11 @@
 #!/usr/bin/env ruby 
  require "bundler/setup" 
-require 'find_a_lawyer_gem'
+require 'find_a_lawyer_gem' 
+require 'scrape' 
 require 'open-uri'
 
-start = FindALawyerGem::Scrape.greet
+#start = FindALawyerGem::Scrape.greet
 
-start
+scrape = Scrape.new
+puts scrape
  
