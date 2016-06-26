@@ -2,8 +2,5 @@
 require 'nokogiri'
 require 'pry'
 
- class Scrape
-
-
-     
-  end  
+class Scrape 
+end  
