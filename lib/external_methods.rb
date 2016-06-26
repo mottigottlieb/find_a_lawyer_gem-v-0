@@ -83,14 +83,6 @@
     		end
     		    status
 	end
-        def self.track
-          @@track
-        end
-        
-        def self.clear_and_greet
-           @@id = 1
-           self.track.clear 
-           self.greet
-        end
-          
+	
+    
          

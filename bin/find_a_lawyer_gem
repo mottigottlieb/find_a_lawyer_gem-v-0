@@ -4,23 +4,6 @@ require 'find_a_lawyer_gem'
 require 'scrape' 
 require 'methods' 
 require 'open-uri'
-
-#start = FindALawyerGem::Scrape.greet
-
-# when program starts 
-   # 1. create a new Methods Instance
-   methods = Methods.new 
-    #2. create a new scrape instance
-    scrape = Scrape.new
-##
-
-# ask a user 
- #   1. legal issue
-  #  2. location
-   # Create hash and << @@track info
-    methods.greet
-#    Display results
-    
-
-puts methods
-puts scrape
+ 
+ 
+ start = FindALawyerGem::Start.new.call

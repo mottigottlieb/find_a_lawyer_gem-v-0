@@ -81,6 +81,13 @@ class Methods
     
 end
 
+
+       def clear_and_greet
+           @@id = 1
+           self.class.track.clear 
+           self.greet
+        end
+          
  def results
            puts "___________"
            puts "Please enter the number of lawyer you want more info on"
