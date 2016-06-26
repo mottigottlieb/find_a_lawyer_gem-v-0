@@ -2,10 +2,22 @@
  require "bundler/setup" 
 require 'find_a_lawyer_gem' 
 require 'scrape' 
+require 'methods' 
 require 'open-uri'
 
 #start = FindALawyerGem::Scrape.greet
 
+# create new scrape instance 
+
 scrape = Scrape.new
+
+# gather the users zip and legal issue
+    # scrape Avvo.com with that info
+    #create hash 
+    
 puts scrape
  
+ 
+ a = Methods.new
+ puts "method"
+ puts a 
