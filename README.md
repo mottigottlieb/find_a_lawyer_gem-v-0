@@ -1,7 +1,6 @@
 # FindALawyerGem
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/find_a_lawyer_gem`. To experiment with that code, run `bin/console` for an interactive prompt.
-
+Welcome to Find a Lawyer Gem! 
 To execute: Run ```ruby bin/find_a_lawyer_gem```  from terminal.
 
 ## Installation
