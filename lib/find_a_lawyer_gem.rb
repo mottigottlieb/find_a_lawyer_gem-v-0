@@ -3,13 +3,11 @@ require 'nokogiri'
 require 'pry'
 
 module FindALawyerGem
-    
     class Start
-    
         def call
-          methods = Methods.new 
-          scrape = Scrape.new
-          methods.greet
-        end
+      methods = Methods.new
+      scrape = Scrape.new
+      methods.greet
     end
-end 
+  end
+end
